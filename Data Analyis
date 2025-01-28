@@ -1,0 +1,40 @@
+import pandas as pd
+
+# Load the dataset
+# For this example, we'll assume the dataset is a CSV file named 'data.csv'
+df = pd.read_csv('data.csv')
+
+# Display the first few rows of the dataset
+print("First 5 rows of the dataset:")
+print(df.head())
+
+# Display basic information about the dataset
+print("\nDataset Info:")
+print(df.info())
+
+# Display summary statistics for numerical columns
+print("\nSummary Statistics:")
+print(df.describe())
+
+# Check for missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Example analysis: Group by a column and calculate the mean of another column
+# Replace 'column1' and 'column2' with actual column names from your dataset
+grouped_data = df.groupby('column1')['column2'].mean()
+print("\nGrouped Data (Mean of column2 by column1):")
+print(grouped_data)
+
+# Example analysis: Correlation matrix
+print("\nCorrelation Matrix:")
+print(df.corr())
+
+# Example analysis: Value counts of a categorical column
+# Replace 'categorical_column' with an actual column name from your dataset
+value_counts = df['categorical_column'].value_counts()
+print("\nValue Counts for categorical_column:")
+print(value_counts)
+
+# Save the cleaned and analyzed data to a new CSV file
+df.to_csv('cleaned_data.csv', index=False)
