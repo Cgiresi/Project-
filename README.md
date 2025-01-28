@@ -1,2 +1,2 @@
-# Project-
-Market Cap weighted Portfolio Project
+Dcf analysis. 
+Market Cap weighted portfolio assessment 
